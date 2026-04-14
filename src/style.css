@@ -121,7 +121,18 @@ h1{
 
 .grid{ display:grid; gap: 16px; }
 .grid-3{ grid-template-columns: repeat(3, 1fr); }
-.grid-2{ grid-template-columns: repeat(2, 1fr); }
+.grid-2{ 
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#contact .grid-2{
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+#contact .card{
+  width: min(100%, 560px);
+}
 
 .card{
   background: var(--card);
@@ -166,6 +177,19 @@ h1{
   color: var(--text);
   border: 1px solid var(--border);
 }
+
+#whatsappBtn{
+  background: #25d366;
+  color: #08110c;
+  border-color: #25d366;
+}
+
+#whatsappBtn:hover{
+  background: #1fba57;
+  border-color: #1fba57;
+  filter: none;
+}
+
 .btn-small{ padding: 10px 12px; border-radius: 12px; }
 .w-full{ width: 100%; }
 
@@ -236,12 +260,24 @@ h1{
   gap: 10px;
 }
 
+.card p + p,
+.card p + a,
+.card a + p{
+  margin-top: 8px;
+}
+
+.card a{
+  color: var(--text);
+  text-decoration: none;
+}
+
 .footer{
-  margin-top: 22px;
+  margin-top: 28px;
   padding-top: 18px;
   border-top: 1px solid var(--border);
   color: var(--muted);
   text-align:center;
+  width: 100%;
 }
 
 /* MOBILE */
@@ -268,7 +304,7 @@ h1{
 }
 
 .store-details{
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .center {
